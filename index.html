@@ -1,0 +1,67 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body style="background-image: url(bg.jpg); background-size: 100%">
+
+	<div class="enemy" style="height: 50%;">
+		<h1>ENEMY</h1>
+	</div>
+	<div class="player" style="height: 50%;">
+		<h1>PLAYER</h1>
+	</div>
+
+
+
+
+
+																																																								
+<script>
+	let getrandom = function(){
+		let rand = Math.random()*4
+		let round = Math.round(rand)
+		return round
+
+	}
+	let getrandomfa = function(){
+		let rand = Math.random()*11
+		let round = Math.round(rand)
+		return round
+
+	}
+	let getrandomfu = function(){
+		let rand = Math.random()*11
+		let round = Math.round(rand)
+		return round
+
+	}
+		//alert(getrandom()+getrandom())
+
+	
+	
+
+	let CEC = function(arg){
+		for(let i=0;i<arg;i=i+1){
+			let img = document.createElement('img')
+			document.enemy.appendChild(img)
+			let xa = ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png","super.png"]
+			img.src = xa[getrandomfa()]
+			img.style.height = "200px"
+		}
+	}
+	let CPC = function(arg){
+		for(let i=0;i<arg;i=i+1){
+			let img = document.createElement('img')
+			document.player.appendChild(img)
+			let xsa = ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png","super.png"]
+			img.src = xsa[getrandomfu()]
+			img.style.height = "200px"
+		}
+	}
+	document.querySelector("enemy")
+	document.querySelector("player")
+
+</script>
+</body>
+</html>
